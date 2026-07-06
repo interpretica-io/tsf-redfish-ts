@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>Redfish server/BMC management</description>
+    <author mailto="maxim.menshikov@interpretica.io" />
+    <session track_conf="silent">
+        <prologue><script name="prologue"><objective>Prepare the Redfish group.</objective></script></prologue>
+        <epilogue><script name="epilogue"><objective>Finalize the Redfish group.</objective></script></epilogue>
+        <run><script name="probe"><objective>Fetch the Redfish service root and log its identity.</objective></script></run>
+        <run><script name="audit"><objective>Read the Redfish security posture and gate on it.</objective></script></run>
+    </session>
+</package>

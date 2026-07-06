@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<package version="1.0">
+    <description>tsf-redfish demonstration suite</description>
+
+    <!-- @page redfish-ts Redfish Suite
+          @objective Exercise tsf-redfish against the Redfish service of the
+                     agent the suite runs on.
+
+          @par Test Groups:
+          - @ref redfish-probe - Enumerate devices and dump one in full
+          - @ref redfish-audit - Read the Redfish security posture and gate on it
+
+          @par Notes:
+          - Enumeration runs on the agent, in its RPC server, over
+            
+          - What is attached is up to the host, so the tests do not
+            assert a device count: a host with no USB devices is a clean
+            pass, and the audit gates only on findings at least HIGH.
+          - On the localhost configuration the agent is the build
+            container, which must carry libcurl+jansson.
+    -->
+
+    <author mailto="maxim.menshikov@interpretica.io" />
+
+    <session track_conf="silent">
+        <!-- @page redfish-ts-prologue Test Suite Prologue
+              @objective Prepare the test environment.
+        -->
+        <prologue>
+            <script name="prologue">
+                <objective>
+                    Prepare the test environment.
+                    @md
+                </objective>
+            </script>
+        </prologue>
+
+        <!-- @page redfish-ts-epilogue Test Suite Epilogue
+              @objective Finalize the test environment.
+        -->
+        <epilogue>
+            <script name="epilogue">
+                <objective>
+                    Finalize the test environment.
+                    @md
+                </objective>
+            </script>
+        </epilogue>
+
+        <run>
+            <package name="redfish" />
+        </run>
+    </session>
+</package>
