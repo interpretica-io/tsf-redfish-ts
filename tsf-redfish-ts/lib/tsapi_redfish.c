@@ -6,7 +6,7 @@
  * @author Maxim Menshikov <maxim.menshikov@interpretica.io>
  */
 
-#define TE_LGR_USER "TSAPI USB"
+#define TE_LGR_USER "TSAPI REDFISH"
 
 #include "te_config.h"
 

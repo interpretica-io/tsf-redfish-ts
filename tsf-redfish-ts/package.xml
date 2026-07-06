@@ -14,7 +14,7 @@
           - Enumeration runs on the agent, in its RPC server, over
             
           - What is attached is up to the host, so the tests do not
-            assert a device count: a host with no USB devices is a clean
+            assert a device count: a host with no Redfish endpoint is a clean
             pass, and the audit gates only on findings at least HIGH.
           - On the localhost configuration the agent is the build
             container, which must carry libcurl+jansson.
